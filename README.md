@@ -31,21 +31,21 @@ To get started with this project, follow the steps below:
     cd vehicle-cut-in-detection
     ```
 
-2. Install the required Python packages:
+2. Install the required Python package:
     ```bash
     pip install ultralytics
     ```
 
 3. Download the YOLOv8 model weights:
     ```bash
-    wget -P models/ https://path_to_yolov8_weights/yolov8s.pt
+    YOLO('yolov8s.pt')
     ```
 
 ## Usage
 
 ### Preprocessing and Speed Calculation
 
-1. Load the dataset and calculate smoothed speeds using the positional data:
+1. Load the dataset and calculate smoothed speeds using the positional data.
 
 ### Object Detection and Cut-In Detection
 
@@ -63,19 +63,22 @@ The positional data and timestamps are loaded from a CSV file. The distance betw
 
 ### Object Detection Using YOLOv8
 
-The YOLOv8 model, pre-trained on the COCO dataset, is used for detecting vehicles and other objects in the images. The height of detected objects is used to estimate the distance from the camera.
+The YOLOv8 model is used for detecting vehicles and other objects in the images. The height of detected objects is used to estimate the distance from the camera.
 
 ### Distance Calculation from Bounding Boxes
 
-The bounding box height and known focal length of the camera are used to calculate the distance to detected objects.
+The bounding box height and estimated focal length of the camera are used to calculate the distance to detected objects, based on the formula from section 2.3 of this paper: https://arxiv.org/abs/2106.10319 .
 
 ### Cut-In Detection
 
-A cut-in event is detected if a vehicle is within a certain distance and in the second lane section. The Time-To-Collision (TTC) is calculated and compared to a threshold to issue warnings.
+A cut-in event is detected if a vehicle is within a certain distance and in front of the camera (forward lane). The Time-To-Collision (TTC) is calculated and compared to a threshold to issue warnings.
 
 ## Results
 
 The system detects cut-in events and issues warnings if the TTC is below a critical threshold. The results are visualized, showing bounding boxes, distances, and TTC values.
+
+Visualisation 1:     (https://drive.google.com/file/d/1iRIpXYUv-ybY79hJH-l1ns2dDPnT_MMH/view)
+Model Run on Kaggle: (https://drive.google.com/file/d/1foAdxbrIQcTHnOKb28OD-3hwTJyuOLlT/view)
 
 ## License
 
