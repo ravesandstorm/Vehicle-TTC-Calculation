@@ -15,7 +15,7 @@ This repository contains the code for detecting vehicle cut-in events using a co
     - [Distance Calculation from Bounding Boxes](#distance-calculation-from-bounding-boxes)
     - [Cut-In Detection](#cut-in-detection)
 - [Results](#results)
-    -[Overall Evaluation Time](#overall-evaluation-time)
+    - [Overall Evaluation Time](#overall-evaluation-time)
     - [Evaluation of Images](#evaluation-of-images)
 - [Video Demonstration](#video-demonstration)
 - [License](#license)
