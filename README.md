@@ -17,7 +17,7 @@ This repository contains the code for detecting vehicle cut-in events using a co
 - [Results](#results)
     - [Overall Evaluation Time](#overall-evaluation-time)
     - [Evaluation of Images](#evaluation-of-images)
-- [Video Demonstration](#video-demonstration)
+- [Video Files](#video-demonstration)
 - [License](#license)
 
 ## Introduction
@@ -106,13 +106,7 @@ The model is evaluated on all frames to detect cut-in events. When such an event
 This mode is to be calibrated and used in case of real time-data, with speed or positional data and focal length set according to the camera used, and instead of plotting the images, it should be saved to a log file to maintain the real-time evaluation speed of the live feed.
 From the dataset provided, the model was able to detect a cut-in event from all the images from “idd_mm_primary/idd_multimodal/primary/d0”, which was a dog running across the lane in front of the vehicle, which is shown in the first video link provided. The second model shows the validity of running the model, with working of both modes shown. 
 
-## Video Demonstration
-Below is a demonstration video of the vehicle cut-in detection system in action:
-
-<video controls>
-  <source src="https://drive.google.com/uc?export=download&id=1iRIpXYUv-ybY79hJH-l1ns2dDPnT_MMH" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+## Video Files
 
 The links for the videos are:
 Visualisation 1:     (https://drive.google.com/file/d/1iRIpXYUv-ybY79hJH-l1ns2dDPnT_MMH/view)
